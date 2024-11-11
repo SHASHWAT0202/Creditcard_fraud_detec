@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection | Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylef.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="left">
+            </div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('fraud_detection') }}">Fraud Detection</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fraud Detection Section -->
+    <div class="fraud-detection-container">
+        <h1 class="fraud-title">Fraud Detection</h1>
+        <form method="POST" class="fraud-form">
+            <label for="features" class="form-label">Enter all 30 features, separated by commas:</label>
+            <input type="text" id="features" name="features" class="form-input" required placeholder="e.g., 0.1, 0.2, 0.3, ..., 1.0">
+            <button type="submit" class="form-button">Predict</button>
+        </form>        
+
+        {% if prediction %}
+            <p class="prediction-result">Prediction: {{ prediction }}</p>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        
+        <p class="footer-rights">© 2024 Credit Card Fraud Detection | All rights reserved.</p>
+    </footer>
+</body>
+</html>

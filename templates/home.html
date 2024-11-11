@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="left">
+            </div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('fraud_detection') }}">Fraud Detection</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Protect Your Transactions with Confidence</h1>
+            <p class="hero-subtitle">Our advanced fraud detection system keeps your financial transactions secure and accurate.</p>
+            <a href="{{ url_for('fraud_detection') }}" class="cta-button">Start Detection</a>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='css/images/ccf.png') }}" alt="Fraud Detection Image">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="features-title">Key Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <img src="{{ url_for('static', filename='css/images/REALTD.jpg') }}" alt="Fraud Detection Image">
+                <h3>Real-Time Detection</h3>
+                <p>Implement a trained model on your website to evaluate submitted data for authenticity in real time.</p>
+            </div>
+            <div class="feature-card">
+                <img src="{{ url_for('static', filename='css/images/AIDRIVENSECURITY.jpg') }}" alt="Fraud Detection Image">
+                <h3>AI-Driven Accuracy</h3>
+                <p>Leverage machine learning to achieve accurate fraud detection with minimal false positives.</p>
+            </div>
+            <div class="feature-card">
+                <img src="{{ url_for('static', filename='css/images/GLOBALSEC.jpg') }}" alt="Fraud Detection Image">
+                <h3>Global Security</h3>
+                <p>Our system offers worldwide coverage, ensuring your transactions are always protected.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2 class="testimonials-title">What Our Users Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p>"This fraud detection system saved me from a major security breach. It's reliable, easy to use, and fast!"</p>
+                <span>- Sarah J., Business Owner</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"I feel confident knowing my transactions are being monitored in real time. It's the best fraud prevention tool I've used."</p>
+                <span>- Michael P., Individual User</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Start Protecting Your Transactions Today</h2>
+            <p>Join thousands of users who trust us to secure their financial transactions. Get started with our fraud detection system now.</p>
+            <a href="{{ url_for('fraud_detection') }}" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p class="footer-rights">© 2024 Credit Card Fraud Detection | All rights reserved.</p>
+    </footer>
+</body>
+</html>
